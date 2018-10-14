@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+import dj_database_url
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
 from oscar import get_core_apps
 from oscar.defaults import *
@@ -97,10 +98,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 OSCAR_MISSING_IMAGE_URL = 'image_not_found.jpeg'
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'URL': os.environ.get('DATABASE_URL')
-    }
+    'default': dj_database_url.config(
+        env='DATABASE_URL',
+        conn_max_age=600
+    )
 }
 
 # Password validation

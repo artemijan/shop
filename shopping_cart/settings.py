@@ -25,7 +25,7 @@ OSCAR_SHOP_NAME = 'Shop'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '=_m1(^k*=&ltab$-hjynrryet8yerjgjj&o36bsn!5sn!n!fb*'
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'shop-fy.herokuapp.com']
 SITE_ID = 1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

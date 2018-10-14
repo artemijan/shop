@@ -2,4 +2,4 @@ Django==2.1.2
 django-oscar==1.6.4
 factory-boy==2.11.1
 pycountry==18.5.26
-
+gunicorn==19.9.0

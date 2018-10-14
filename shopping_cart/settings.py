@@ -52,8 +52,9 @@ INSTALLED_APPS = [
                      'django.contrib.flatpages',
                      'widget_tweaks'
                  ] + get_core_apps()
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',

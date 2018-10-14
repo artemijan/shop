@@ -98,13 +98,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 OSCAR_MISSING_IMAGE_URL = 'image_not_found.jpeg'
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-        'ATOMIC_REQUESTS': True,
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'URL': os.environ.get('DATABASE_URL')
     }
 }
 
